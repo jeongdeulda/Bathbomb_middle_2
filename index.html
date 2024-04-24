@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>오늘밤</title>
+
+	<style type="text/css">
+
+		/*폰트*/
+			@font-face {
+		    font-family: 'Pretendard-Bold';
+		    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+		    font-weight: 700;
+		    font-style: normal;}
+			@font-face {
+		    font-family: 'Pretendard-Regular';
+		    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+		    font-weight: 400;
+		    font-style: normal;}
+		    @font-face {
+		    font-family: 'Pretendard-Light';
+		    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+		    font-weight: 300;
+		    font-style: normal;}
+	    	@font-face {
+	    	font-family: 'KimjungchulMyungjo-Bold';
+	    	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Bold.woff2') format('woff2');
+	    	font-weight: 700;
+	    	font-style: normal;}
+	    	@font-face {
+	    	font-family: 'KimjungchulMyungjo-Regular';
+	    	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Regular.woff2') format('woff2');
+	    	font-weight: 400;
+	    	font-style: normal;}
+	        	@font-face {
+	    	font-family: 'KimjungchulMyungjo-Light';
+	    	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulMyungjo-Light.woff2') format('woff2');
+	    	font-weight: 300;
+	    	font-style: normal;}
+	    	@font-face {
+	    	font-family: 'Cafe24Shiningstar';
+	    	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
+	    	font-weight: normal;
+	    	font-style: normal;}
+
+
+   			html{font-family: Pretendard-Regular; font-style: 'normal;'; fo word-break: keep-all; display: block;}
+			body,h1,h2,h3,h4,h5,p,ul,ol,header,block{margin: 0; padding: 0;}
+			.wrap {width: 1000px; position: relative; margin: auto;}
+
+		/*네비게이션*/
+			/*nav {dispaly: block; unicode-bidi: isolate;  background: white; color: #00BFFF; width: 100%; top: 10px; z-index: 1000; margin: 0 auto; position: relative; height: 50px;}
+			.nav-wrap {display: flex; justify-content: space-between; position: fixed; background: white;}
+			.menu {font-family: 'KimjungchulMyungjo-Regular'; x; padding-right: 50px;}
+			.menu li {list-style-type: none;}
+			.menu li a {display: block; padding: 10px 20px; text-decoration: none; color: #00BFFF;}
+			.menu li a:hover{background: #8DE2FF; color:white;}
+			.logo {font-family: 'KimjungchulMyungjo-Light'; font-style: normal; font-size: 1rem; color: #00BFFF; padding-left: 50px; padding-top: 10px;}*/
+
+		/*배경*/
+			.bath{height: 900px; background: #8DE2FF;}
+			.wrap_2{height: 2000px; background: #8DE2FF;}
+
+
+		/*nav*/
+   			.flex{display: flex; justify-content: space-between; 
+   					padding: 5px 0px; gap: 0%; align-items: center;}
+   			.logo{display: block; font-family: KimjungchulMyungjo-Regular;
+   					font-style: normal; color: #00BFFF; font-size: 1.1rem;}
+   			.menu {width: 350px; font-family: KimjungchulMyungjo-Regular;
+   					font-style: normal; color: #00BFFF;}
+   			.menu li{list-style-type: none; margin: 0px;}
+   			.menu li a{display: block; padding: 10px 0px;
+            		text-decoration: none; color: #00BFFF; gap: 0%}
+   			.menu li a:hover{
+                  color: black; transition: 0.3s}
+            nav{position: fixed; top: 0; left: 0; right: 0; 
+            		background: white; z-index: 1000; margin: auto;}
+
+		/*제목*/
+			.title {position: absolute; z-index: 2; width: 100%; text-align: center; top: 36%; font-size: 1.7rem; font-family: Cafe24Shiningstar; font-style: normal;}
+			.title-2 {position: absolute; z-index: 2; width: 100%; text-align: center; top: 38%; font-size: 4.2rem; letter-spacing: rem; font-family: KimjungchulMyungjo-Light; font-style: normal;}
+			.title-3 {position: absolute; z-index: 2; width: 100%; text-align: center; top: 45%; font-size: 8.5rem; letter-spacing: rem; font-family: KimjungchulMyungjo-Light; font-style: normal;}
+
+		/*Serction*/
+			.s1 {position: relative; z-index: 4; background-color: white; }
+			.s2 {background: #00BFFF;; position: relative; top: 1650px; bottom: px; border-top: solid 1px black;}
+			.s3{background-color: black; width: 100%; position: relative; top: 1900px;}
+
+
+
+		/*이미지*/
+			.imag-Ribon_B{width: 100%; z-index: 0; display: block; padding-top: 120px;}
+			.imag-Ex{width: 100%; display: block; padding-top:30px;}
+			.imag_Ribon_U{position: absolute; z-index: 2; display: block;width: 105%; padding-bottom: 600px; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+			.imag_Ribon_T{position: absolute; z-index: 0; display: block;width: 117%; padding-bottom: 300px;  top: 50%; left: 50%; transform: translate(-50%, -50%);}
+			.imag-Bomb_1{position: absolute;  top: -710px; left: 700px; transform: translate(-50%, -50%);}
+			.imag-Bomb_2{position: absolute;  top: -290px; left: 700px; transform: translate(-50%, -50%);}
+			.imag-Bomb_3{position: absolute; bottom: 70px; left: 400px;}
+			/*.imag-Blue{position: absolute; padding-top: 500px;  top: 50%; left: 50%; transform: translate(-50%, -50%);}*/
+
+
+		/*p : 내용*/
+		/* Section 0*/
+			.p_a {padding-top: 160px; text-align: center; font-family: 	KimjungchulMyungjo-Regular; font-style: normal; font-size: 2.5rem; letter-spacing: -0.05rem;}
+			.p_b {padding-top: 30px; padding-bottom: 150px; text-align: center; font-family: ; font-style: normal; font-size: 1.5rem; font-family: Pretendard-Light; font-style: normal; line-height: 2.5rem; letter-spacing: -0.05rem;}
+
+		/* Section 1*/
+			.p_c {position: absolute; z-index: 2; width: 100%; text-align: center; top: 450px; font-family: Pretendard-Regular; font-style: normal;font-size: 1.7rem; letter-spacing: -0.05rem;}
+			.p_d {position: absolute; z-index: 2; text-align: center; top: 700px; font-size: 3rem; letter-spacing: -0.05rem; width: 100%}
+			.p_e {position: absolute; z-index: 2; left: 200px;text-align: left; top: 1300px; font-size: 2rem; letter-spacing: -0.05rem;}
+			.p_f {position: absolute; z-index: 2; left: 200px;text-align: left; top: 1710px; font-size: 3rem; letter-spacing: -0.05rem;}
+
+		/* Section 2*/
+			.p_g {text-align: left; font-family: ; font-style: normal; font-size: 6.5rem; font-family: Pretendard-Bold; font-style: normal; line-height: 8rem; letter-spacing: -0.06rem; padding: 180px 50px;}
+
+		/* Section 3*/
+			.Many {width: 100%; overflow-x: scroll; margin: 0;}
+			.Many .content {display: inline-block; margin: 0; padding-top: 80px; padding-bottom: 0; font-size: 3rem;}
+	</style>
+</head>
+<body>
+	<body>
+	<nav>
+		<div class="wrap flex">
+			<div class="logo">
+				오늘밤
+			</div>
+			<ul class="menu flex">
+				<li>
+					<a href="#aaa">ABOUT</a>
+				</li>
+				<li>
+					<a href="#aaa">추천제품</a>
+				</li>
+				<li>
+					<a href="#aaa">이용가이드</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<section>
+		<div class="bath">
+				<div class="wrap">
+				<img src="Back/Ribon_T.png" class="imag_Ribon_T">
+				<img src="Back/Ribon_U.png" class="imag_Ribon_U">
+				<img src="Back/Ribon_B.png" class="imag-Ribon_B">
+				<p class="title">오늘 하루 수고한 당신을 위한 작은 선물</p>
+				<p class="title-2">BATHBOMB</p>
+				<p class="title-3">오늘밤</p>
+				</div>
+			<div class="wrap_2">
+				<div class="wrap">
+					<img src="Back/Ex.png" class="imag-Ex">
+					<p class="p_c">그렇다면</p>
+					<p class="p_d">하얀 네모 속에<br>물을 한가득 채워<br><span style="font-family: Pretendard-Bold; font-style: normal;">'오늘밤'을 넣어 보세요</span></p>
+					<p class="p_e">'오늘밤'속<br><span style="font-family: Pretendard-Bold; font-style: normal;">재료</span>들은 <span style="font-family: Pretendard-Bold; font-style: normal;">물</span>과 만나면<br><span style="font-family: Pretendard-Bold; font-style: normal;">화학적 반응</span>을 일으키고,</p>
+					<p class="p_f">물 속에서 일어난<br><span style="font-family: Pretendard-Bold; font-style: normal;">화학적 반응</span>은<br><span style="font-family: Pretendard-Bold; font-style: normal;">물리적 변화</span>를 거쳐,</p>
+				</div>
+				<div class="wrap">
+					<img src="Bomb/Bomb_1.png" class="imag-Bomb_1">
+					<img src="Bomb/Bomb_2.png" class="imag-Bomb_2">
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="s1">
+		<div class="wrap">
+			<p class="p_a">"오늘 하루도 정신 없이 지나갔구나..."</p>
+			<div>
+			<p class="p_b">정신 없는 하루 하루,<br>힐링을 위해 멀리 떠나고 싶지 않으신가요?<br>하지만 여행하러 갈 시간도 없고<br>떠나는 시간마저 아깝지는 않으신가요?</p>
+			</div>
+		</div>
+	</section>
+	<section class="s2">
+		<div class="wrap">
+			<p class="p_g">궁극적으로 주변<br><span style=color:white>공간</span>을 <span style=color:white>재료</span>에<br>맞게 <span style=color:white>변화</span><br>시킵니다</p>
+			<img src="Bomb/Bomb_3.png" class="imag-Bomb_3">
+		</div>
+	</section>
+	<section class="s3">
+		<div class="Many">
+						<span class="content" style=color:white>집 학교 비행기 기차 자동차 골목 전시관 책방 우주 사막 숲 바다 하늘 동굴 이불</span>
+		</div>
+		<div class="Many">
+			<span class="content"  style=color:white> 집 학교 비행기 기차 자동차 골목 전시관 책방 우주 사막 숲 바다 하늘 동굴 이불</span>
+		</div>
+	</section>
+
+</body>
+</html>
